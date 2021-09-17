@@ -1,0 +1,92 @@
+@import "normalize.css/normalize";
+@import "assets/scss/font.scss";
+@import "assets/scss/simple-grid.scss";
+
+
+  /* Media Queries
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /*
+  Note: The best way to structure the use of media queries is to create the queries
+  near the relevant code. For example, if you wanted to change the styles for buttons
+  on small devices, paste the mobile query code up in the buttons section and style it
+  there.
+  */
+    /* Larger than mobile */
+    @media (min-width: 400px) {}
+  
+    /* Larger than phablet (also point when grid becomes active) */
+    @media (min-width: 550px) {}
+    
+    /* Larger than tablet */
+    @media (min-width: 750px) {}
+    
+    /* Larger than desktop */
+    @media (min-width: 1000px) {}
+    
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {}
+  
+   /*** encaja css***/
+ 
+
+html{
+  font-family: "SansProRegular";
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+button{
+  border: none;
+}
+.bolder{
+  font-weight: bolder;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: -2px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  padding-right: 2rem;
+  font-family: inherit;
+  option{
+    font-family: inherit;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+
+.swiper-container-horizontal{
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 4px!important;
+  }
+}
+.swiper-pagination-bullet{
+  width: 8px!important;
+  height: 8px!important;
+  display: inline-block!important;
+  border-radius: 100%!important;
+  background: #000!important;
+  opacity: 0.2!important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1!important;
+  //background: var(#ffffff,var(#007aff))!important;
+  background: #F8EC25!important;
+}
+:focus{
+  outline: none;
+}

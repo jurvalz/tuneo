@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tuneo</title>
+  <base href="/">
+  <meta name="description" content="Organiza tu vida a partir de tus sueños. Muebles ensamblables en todas las formas que puedas imaginar. Pueden ser armados fácilmente y desarmados si necesitas transportarlos." />
+  <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+  <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+  <link rel="icon shortcut" type="image/jpg"sizes="any" href="assets/images/partes/menu/principal/logo.jpg">
+  <script src="https://checkout.culqi.com/js/v3"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    var __importDefault = (this && this.__importDefault) || function (mod) { return (mod && mod.__esModule) ? mod : { "default": mod }; }  
+    function culqi() {
+      document.querySelector('#compra').click();
+    };
+    function onDragStart(event) {
+      event.dataTransfer.setData('text', event.target.id);
+      //event.dataTransfer.setData('text/plain', event.target.id);
+      event.currentTarget.style.border = '1px solid yellow';
+    }
+    function onDragOver(event) {
+      event.preventDefault();
+    }
+    function onDrop(event) {
+      event.preventDefault();
+      const id = event.dataTransfer.getData('text');
+      const draggableElement = document.getElementById(id);
+      draggableElement.style.position = 'unset';
+      draggableElement.style.width = '100%';
+      draggableElement.style.height = '100%';
+      const dropzone = event.target;
+      dropzone.appendChild(draggableElement);
+      //event.dataTransfer.clearData();
+    }
+  </script>
+</body>
+</html>

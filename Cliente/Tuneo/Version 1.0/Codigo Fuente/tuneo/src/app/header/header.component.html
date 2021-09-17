@@ -1,0 +1,98 @@
+<div class="top-menu"></div>
+<header [className]="header.seccion == 'T'?'ecapa container':'ecapa-arq container'">
+    <div class="row">
+        <div class="col-2">
+            <img class={{header.clase}} src={{header.imagen}} />
+        </div>
+        <div class="col-1 banner3 BebasNeueBold" *ngIf="header.titulo != null">
+            {{header.titulo}}
+        </div>
+        <div class="col-7 banner2 lema" *ngIf="header.titulo != null">
+            <p class="bold linea-p">{{header.frase1}}</p>
+            <p>{{header.frase2}}</p>
+        </div>
+        <div class="col-8 banner2" *ngIf="header.titulo == null">
+            <div class="tunear-lema">
+                <p class="bold linea-p">{{header.frase1}}</p>
+                <p>{{header.frase2}}</p>
+            </div>
+        </div>
+        <div class="col-2 banner1" *ngIf="header.seccion=='T'">
+            <div class="row">
+                <button id="btnRegistro" class="btn-log" *ngIf="!access" (click)="registrar()">REGISTRARSE</button>
+                <button id="btnIngresar" class="btn-log" (click)="ingresar()" *ngIf="!access">INGRESAR</button>
+                <p *ngIf="access">Bienvenid@, {{nombre}}</p>
+                <a routerLink="/tuneos">
+                    <button class="btn-log" *ngIf="access">MIS TUNEOS</button>
+                </a>
+                <button class="btn-log" (click)="salir()" *ngIf="access">SALIR</button>
+                <img [ngClass]="{'car':!access,'car-access':access}" (click)="carrito()" src="assets/images/partes/menu/principal/carritoAmarillo.svg" />
+                <span class="numero">{{cantidadCarrito}}</span>
+                <a id="carrito" routerLink="/tuneos"></a>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Buscar..." class="itext">
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div id="miModal" class="hidden">
+    <div class="modal-contenido">
+        
+        <a id="closeModalLogin" (click)="cerrarLogin()">&times;</a>
+        <h2>DATOS DE CUENTA</h2>
+        <form>
+            <input id="tusuario" name="tusuario" type="text" placeholder="Ingrese usuario" [(ngModel)]="tusuario">
+            <input type="password" name="tcredencial" placeholder="Ingrese contraseña" [(ngModel)]="tcredencial">
+            <button (click)="login()">INGRESAR</button>
+        </form>
+    </div>
+</div>
+<div id="miModalRegistro" class="hidden">
+    <div class="modal-contenido-registro">
+        <a id="closeModalRegistro" (click)="cerrarRegistro()">&times;</a>
+        <h2>HOLA</h2>
+        <div class="segmento">
+            <p>Escoge un usuario</p>
+            <input type="text" id="nusuario" placeholder="Ingrese usuario" [(ngModel)]="nusuario.coUsuario">
+        </div>
+        <div class="segmento">
+            <p>¿Cómo te llamas?</p>
+            <input type="text" placeholder="Ingrese nombre" class="nombre" [(ngModel)]="nusuario.nombres">
+            <input type="text" placeholder="Ingrese apellido" class="apellido" [(ngModel)]="nusuario.apellidos">
+        </div>
+        <div class="segmento">
+            <p>¿Cúal es tu correo electrónico?</p>
+            <input type="text" placeholder="Ingrese correo" [(ngModel)]="nusuario.correo">
+        </div>
+        <div class="segmento">
+            <p>Escoge una contraseña</p>
+            <input type="password" placeholder="Ingrese contraseña" [(ngModel)]="tcredencial">
+        </div>
+        <div class="segmento">
+            <p>Repite la contraseña</p>
+            <input type="password" placeholder="Ingrese contraseña" [(ngModel)]="rcredencial">
+        </div>
+        <div class="segmento">
+            <input type="checkbox" name="" id="">
+            <p><a class="terminosCondiciones" (click)="aceptarTerminosCondiciones()">Acepto los T&C.</a></p>
+        </div>
+        <div class="segmento">
+            <button (click)="guardar()">GUARDAR</button>
+        </div>
+
+    </div>
+</div>
+<div id="miModalTerminosCondiciones" class="hidden">
+  <div class="modal-contenido-registro">
+    <a id="closeModalRegistro" (click)="cerrrarTerminosCondiciones()">&times;</a>
+    <div id="detalleTermino">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quod impedit ea quidem inventore dolore odit consequuntur nam. Nesciunt repudiandae harum eaque fuga omnis optio nostrum impedit explicabo, iusto aperiam.
+    </div>
+    <div class="segmento">
+        <button (click)="guardar()">Aceptar</button>
+    </div>
+</div>
+</div>

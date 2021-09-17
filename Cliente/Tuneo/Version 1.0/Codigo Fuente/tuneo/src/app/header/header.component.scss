@@ -1,0 +1,380 @@
+$font-size-s: 0.7rem;
+$font-size-m: 0.8rem;
+$font-size-l: 1rem;
+$font-size-xl: 1.9rem;
+.ecapa{
+    z-index: 10;
+    position: relative;
+    height: 10.9vh;
+    background-color: #dedede;
+}
+.ecapa-arq{
+    z-index: 10;
+    position: relative;
+    height: 10.9vh;
+    background-image: url(./../../assets/images/partes/menu/principal/fondoarq.png);
+    background-size: cover;
+}
+.top-menu{
+    height: 5vh;
+}
+.lema{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 10.9vh;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tunear-lema{
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 10.9vh;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.linea-p{
+    width: 100%;
+}
+@media(max-width:2000px) and (min-width:1601px){
+    .btn-log{
+        border: 1px solid #b1b0b0;
+        border-radius: 0.3rem;
+        background-color: #dfdfdf;
+        color: #292726;
+        font-size: $font-size-m;
+        font-weight: bold;
+        margin-right: 1rem;
+        position: relative;
+        top: -1vh;
+    }
+    .modal-contenido-registro{
+
+        .segmento{
+            input.nombre{
+                width: 26.36%!important;
+                margin-right: 2%;
+            }
+            input.apellido{
+              width: 26.26%!important;
+              margin-right: 2%;
+             }
+
+
+        }
+    
+    }
+}
+@media(max-width:1600px) and (min-width:1401px){
+    .btn-log{
+        border: 1px solid #b1b0b0;
+        border-radius: 0.3rem;
+        background-color: #dfdfdf;
+        color: #292726;
+        font-size: $font-size-s;
+        font-weight: bold;
+        margin-right: 0.25vw;
+        position: relative;
+        top: -1vh;
+    }
+    .modal-contenido-registro{
+
+        .segmento{
+            input.nombre{
+                width: 26.36%!important;
+                margin-right: 2%;
+            }
+            input.apellido{
+              width: 26.26%!important;
+              margin-right: 2%;
+             }
+
+
+        }
+    
+    }
+}
+@media(max-width:1400px){
+    .btn-log{
+        border: 1px solid #b1b0b0;
+        border-radius: 0.3rem;
+        background-color: #dfdfdf;
+        color: #292726;
+        font-size: $font-size-s;
+        font-weight: bold;
+        margin-right: 0;
+        position: relative;
+        top: -1vh;
+    }
+    .modal-contenido-registro{
+
+        .segmento{
+            input.nombre{
+                width: 26.36%!important;
+                margin-right: 2%;
+            }
+            input.apellido{
+              width: 26.26%!important;
+              margin-right: 2%;
+             }
+
+
+        }
+    
+    }
+}
+ .btn-log:hover{
+    background-color: #f8ec25;
+ }
+.banner1{
+    padding: 0.5vh 0;
+    p{
+        width: 70%;
+        float: left;
+        //margin-top: 1vh;
+    }
+}
+@media(max-width:2000px) and (min-width:1601px){
+    .banner1{
+        padding: 0.5vh 1vh;
+    }
+    .banner2{
+        font-size: $font-size-l;
+        margin-left: -6vw;
+        margin-right: 6vw;
+    }
+}
+@media(max-width:1600px) and (min-width:1400px){
+    .banner1{
+        padding: 0 1vh;
+    }
+    .banner2{
+        font-size: $font-size-m;
+        margin-left: -6vw;
+        margin-right: 6vw;
+    }
+    .modal-contenido-registro{
+
+        .segmento{
+            input.nombre{
+                width: 26.36%!important;
+                margin-right: 2%;
+            }
+            input.apellido{
+              width: 26.26%!important;
+              margin-right: 2%;
+             }
+
+
+        }
+    
+    }
+}
+@media(max-width:1399px){
+    .banner1{
+        padding: 0.5vh 0;
+    }
+    .banner2{
+        font-size: $font-size-m;
+        margin-left: -6vw;
+        margin-right: 6vw;
+    }
+    .modal-contenido-registro{
+
+        .segmento{
+            input.nombre{
+                width: 26.36%!important;
+                margin-right: 2%;
+            }
+            input.apellido{
+              width: 26.26%!important;
+              margin-right: 2%;
+             }
+
+
+        }
+    
+    }
+}
+
+.banner3{
+    left: -7vw;
+    position: relative;
+    font-size: $font-size-xl;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 10.9vh;
+}
+
+.itext{
+    margin-top: 0.5vh;
+    width: 14.6vw;
+    background-color: #dedede;
+    border: 1px solid #b1b0b0;
+    border-radius: 0.4rem;
+}
+.bold{
+    font-weight: bolder;
+}
+.logoHome{
+    position: fixed;
+    width: 9vw;
+    margin-left: 2vw;
+    top: 1vh;
+}
+.logo{
+    // position: fixed;
+    width: 4vw;
+    margin-left: 3vw;
+    top: 1.5vh;
+    position: relative;
+}
+.car{
+    width: 2.5vw;
+    margin-top: 0.5vh;
+}
+.car-access{
+    width: 2vw;
+}
+.modal-contenido-registro{
+    background-color:#DEDEDE;
+    width:540px;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;
+    border-radius: 0.5rem;
+    text-align: center;
+    min-height: 52vh;
+    a{
+        margin-left: 96%;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000000;
+        cursor: pointer;
+    }
+    .segmento{
+        width: 100%;
+        p{
+            text-align: left;
+            width: 40%;
+            float: left;
+            margin: 1vh 0;
+        }
+        input[type=text]{
+            width: 58%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input[type=password]{
+            width: 58%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input[type=checkbox]{
+            width: 8%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input.nombre{
+            width: 27.36%;
+            margin-right: 2%;
+        }
+        input.apellido{
+          width: 27.26%;
+          margin-right: 2%;
+         }
+        .terminosCondiciones{
+          margin-left: 1%;
+          font-size: 1rem;
+        }
+        button{
+            width: 80%;
+            background-color: #F8EC25;
+            margin: 2vh 0;
+            font-family: "SansProRegular";
+            font-size: 1.2rem;
+            border-radius: 0.2rem;
+        }
+    }
+
+}
+.modal-contenido{
+    background-color:#DEDEDE;
+    width:300px;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    input[type=text]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    input[type=password]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    button{
+        width: 80%;
+        background-color: #F8EC25;
+        margin: 2vh 0;
+        font-family: "SansProRegular";
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+    }
+    a{
+      margin-left: 96%;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #000000;
+      cursor: pointer;
+  }
+
+}
+.modal{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition: all 1s;
+    z-index: 501;
+}
+
+.hidden{
+    display: none;
+}
+span.numero{
+    /*position: absolute;
+    top: 1.5vh;
+    left: 13vw;*/
+    position: relative;
+    top: -1.3vh;
+    left: -1.5vw;
+}

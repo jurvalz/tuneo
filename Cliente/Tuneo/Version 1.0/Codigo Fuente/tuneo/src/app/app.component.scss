@@ -1,0 +1,103 @@
+h1 {
+    color: darkblue;
+}
+  
+a {
+   font-size: 20px;
+}
+#btnIngresar{
+    background-color: #ffff00;
+}
+.btnInicio{
+    border-radius: 0.5rem;
+    width: 13rem;
+    font-weight: bolder;
+    text-align: center;
+    height: 3rem;
+    padding-top: 0.2rem;
+    margin-top: 1rem;
+    z-index: 20;
+    float: right;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+#btnRegistrar{
+    background-color: rgba(255,255,255,0.5);
+}
+.closex{
+    background: url(./../assets/images/partes/menu/principal/switch.svg) no-repeat;
+    position: fixed;
+    bottom: 2em;
+    text-align: center;
+    width: 4vw;
+    height: 4vh;
+    left: 48vw;
+    cursor: pointer;
+    z-index: 100;
+}
+.closex-arq{
+    background: url(./../assets/images/partes/menu/principal/switch.svg) no-repeat;
+    position: fixed;
+    bottom: 2em;
+    text-align: center;
+    width: 4vw;
+    height: 4vh;
+    left: 48vw;
+    cursor: pointer;
+    z-index: 100;
+    transform: rotate(180deg);
+}
+.tituloClosex{
+    position: fixed;
+    bottom: -1vh;
+    text-align: center;
+    width: 9vw;
+    height: 4vh;
+    left: 46vw;
+    z-index: 100;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+.hidden{
+    display: none!important;
+}
+
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+    
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+    /* Center slide text vertically */
+    /*
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;*/
+}
+.white{
+    color: #ffffff !important;
+}
+
+.fondo-gris{
+    height: 13.8vh;
+    background-color: #4D4D4D;
+    top: 86.2vh;
+    position: absolute;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,23 @@
+<div id="principalContainer">
+    <div class="container-fluid" >
+        <router-outlet>
+        </router-outlet>
+        <div [ngClass]="{'fondo-gris':seccion=='A'}"></div>   
+        <div class="row">
+                <div class="five columns">
+                    <dock [(home)]="seccion"></dock>
+                    
+                </div>
+                <div class="two columns">
+                    <a [routerLink]="'/arq'" id="arq" class="hidden"></a>
+                    <a [routerLink]="'/'" id="tienda" class="hidden"></a>
+                    <div [ngClass]="{'closex':seccion=='T','closex-arq':seccion=='A'}" (click)="cambiaSeccion()"></div>
+                    <p id="titTuneoT" class="tituloClosex">TUNEO TIENDA</p>
+                    <p id="titTuneoA" class="tituloClosex white hidden">TUNEO ARQUITECTURA</p>
+                </div>
+                <div class="five columns">
+                    <dock-contacto [(home)]="seccion"></dock-contacto>
+                </div>
+        </div>
+    </div>
+</div>
