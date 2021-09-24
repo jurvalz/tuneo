@@ -1,0 +1,179 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1.48% 12.50% 5.47% 1.95% 17.58% 2.11% 0.23% 0.70% 16.72% 1.95% 8.98% 1.25% 7.81% 2.11% 17.66% 1.48%;
+    //grid-template-rows: 2.99% 8.21% 11.19% 1.49% 3.73% 1.49% 3.73% 1.49% 3.73% 47.76% 16.7%;
+    grid-template-rows: 3.59% 9.86% 13.43% 1.79% 4.48% 1.79% 4.48% 1.79% 4.48% 57.33%;
+    width: 100%;
+    height: 68.3vh;
+}
+
+.pquien{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    font-size: 0.8rem;
+    line-height: 2.8vh;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-style: italic;
+}
+
+
+.btn1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    font-style: italic;
+}
+.btn2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    font-style: italic;
+}
+.btn3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    font-style: italic;
+}
+
+.btn-gen{
+    border: 1px solid #b1b0b0;
+    border-radius: 0.3rem;
+    background-color: #292726;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.proy1{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 10;
+}
+.proy2{
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 10;
+}
+.proy3{
+    grid-column-start: 13;
+    grid-column-end: 16;
+    grid-row-start: 2;
+    grid-row-end: 10;
+}
+
+.pro-gen{
+    //border: 1px solid #726b6b;
+    background-color: #726b6b;
+    .imagen{
+        height: 25vh;
+        opacity: 0.7;
+        img{
+            width: 7vw;
+            margin: 5vh 10.1vw;
+        }
+    }
+    .imagen:hover{
+        opacity: 1;
+    }
+    .proyecto{
+        height: 3vh;
+        text-align: right;
+        padding-right: 0.5vw;
+        color: #ffffff;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    .comercial{
+        background: url('https://tuneo.pe/upload-img/arquitectura/comercial/amalia-cafe-cultural/A-Cafe_Cultural__2.jpg');
+        background-size: cover;
+    }
+    .residencial{
+        background: url('https://tuneo.pe/upload-img/arquitectura/residencial/cocina-derby/C4.jpg');
+        background-size: cover;
+    }
+}
+
+
+.red1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.red2{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.red3{
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.red4{
+    grid-column-start: 11;
+    grid-column-end: 14;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.red5{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.red-gen{    
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.board{
+    width: 17vw;
+    height: 38vh;
+    background-color: #c9bfbf;
+    border: 1px solid #cecece;
+    .head{
+        width: 17vw;
+        height: 6.3vh;
+        background-color: #4D4D4D;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        p{
+            width: 13.5vw;
+            padding-left: 0.5vw;
+            color: #ffffff;
+        }
+        img{
+            width: 2.7vw;
+        }
+    }
+    .body{
+        width: 17vw;
+        height: 38vh;
+        background-color: #ffffff;
+    }
+}
+.abutton{
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0.5vh;
+}
