@@ -1,0 +1,71 @@
+<div id="dock-container" style="text-align: left">
+    <div id="dock">
+        <ul *ngIf="home=='T'">
+            <li>
+                <a routerLink="/">
+                    <img id="watchme1" data-src="assets/images/partes/menu/principal/logo.svg" data-seleccion="s" [src]="opcion==1 ? 'assets/images/partes/menu/principal/logoS.svg': 'assets/images/partes/menu/principal/logo.svg'" (mouseenter)="overimg('watchme1')" (mouseleave)="leaveimg('watchme1')" (click)="setOpcion(1)">
+                    
+                </a>
+                <p>INICIO</p>
+            </li>
+            <li>
+                <a routerLink="/armable">
+                    <img id="watchme2" data-src="assets/images/partes/menu/principal/armable.svg" data-seleccion="" [src]="opcion==2 ? 'assets/images/partes/menu/principal/armableS.svg': 'assets/images/partes/menu/principal/armable.svg'" (mouseenter)="overimg('watchme2')" (mouseleave)="leaveimg('watchme2')" (click)="setOpcion(2)">                    
+                    
+                </a>
+                
+                <p>ARMABLES</p>
+            </li>
+            <li>
+                <!--<a routerLink="/modular">-->
+                <a>
+                    <img id="watchme3" data-src="assets/images/partes/menu/principal/modular.svg" data-seleccion="" [src]="opcion==3 ? 'assets/images/partes/menu/principal/modularS.svg':'assets/images/partes/menu/principal/modular.svg'" (mouseenter)="overimg('watchme3')" (mouseleave)="leaveimg('watchme3')" (click)="setOpcion(3)">
+                </a>
+                
+                <p>MODULARES</p>
+            </li>
+            <li>
+                <a routerLink="/tallado">
+                    <img id="watchme4" data-src="assets/images/partes/menu/principal/tallado.svg" data-seleccion="" [src]="opcion==4 ? 'assets/images/partes/menu/principal/talladoS.svg':'assets/images/partes/menu/principal/tallado.svg'" (mouseenter)="overimg('watchme4')" (mouseleave)="leaveimg('watchme4')" (click)="setOpcion(4)">
+                </a>
+                
+                <p>TALLADOS</p>
+            </li>
+            <li>
+                <a routerLink="/premium">
+                    <img id="watchme5" data-src="assets/images/partes/menu/principal/premium.svg" data-seleccion="" [src]="opcion==5 ? 'assets/images/partes/menu/principal/premiumS.svg':'assets/images/partes/menu/principal/premium.svg'" (mouseenter)="overimg('watchme5')" (mouseleave)="leaveimg('watchme5')" (click)="setOpcion(5)">
+                </a>
+                
+                <p>PREMIUM</p>
+            </li>
+        </ul>
+        <ul *ngIf="home=='A'">
+            <li>
+                <a routerLink="/arq">
+                    <img id="watchme1" data-src="assets/images/partes/menu/principal/logotuneo-arq.svg" data-seleccion="s" [src]="opcion==1 ? 'assets/images/partes/menu/principal/logotuneo-arqS.svg':'assets/images/partes/menu/principal/logotuneo-arq.svg'" (mouseenter)="overimg('watchme1')" (mouseleave)="leaveimg('watchme1')" (click)="setOpcion(1)">
+                    
+                </a>
+                <p class="white">INICIO</p>
+            </li>
+            <li>
+                <a routerLink="/residencial">
+                    <img id="watchme2" data-src="assets/images/partes/menu/principal/residencial.svg" data-seleccion="" [src]="opcion==2 ? 'assets/images/partes/menu/principal/residencialS.svg':'assets/images/partes/menu/principal/residencial.svg'" (mouseenter)="overimg('watchme2')" (mouseleave)="leaveimg('watchme2')" (click)="setOpcion(2)">
+                    
+                </a>
+                <p class="white">RESIDENCIALES</p>
+            </li>
+            <li>
+                <a routerLink="/comercial">
+                    <img id="watchme3" data-src="assets/images/partes/menu/principal/comercial.svg" data-seleccion="" [src]="opcion==3 ? 'assets/images/partes/menu/principal/comercialS.svg':'assets/images/partes/menu/principal/comercial.svg'" (mouseenter)="overimg('watchme3')" (mouseleave)="leaveimg('watchme3')" (click)="setOpcion(3)">
+                </a>
+                <p class="white">COMERCIALES</p>
+            </li>
+            <li>
+                <a routerLink="/institucional">
+                    <img id="watchme4" data-src="assets/images/partes/menu/principal/institucional.svg" data-seleccion="" [src]="opcion==4 ? 'assets/images/partes/menu/principal/institucionalS.svg':'assets/images/partes/menu/principal/institucional.svg'" (mouseenter)="overimg('watchme4')" (mouseleave)="leaveimg('watchme4')" (click)="setOpcion(4)">
+                </a>
+                <p class="white">INSTITUCIONALES</p>
+            </li>            
+        </ul>
+    </div>
+</div>
