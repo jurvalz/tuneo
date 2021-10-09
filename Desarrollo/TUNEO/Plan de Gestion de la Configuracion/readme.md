@@ -64,6 +64,12 @@ Contenido
   1.
 ## Situación de la empresa
 
+La empresa Inleggo SAC es una empresa de desarrollo de software, tiene como clientes empresas logísticas, consultoras del sector salud, entre otros.
+
+En los últimos meses tuvo diferentes clientes para implementación de E-Commerce 
+
+
+
 La empresa TUNEO SAC es una empresa especializada en productos en material de madera para el consumo personal de muebles recreativos y productos hechos a medida dedicados a publicidad.
 
 Las ventas regulares se vieron desfavorecidas por la pandemia razón por la cual se estuvo acumulando la producción mensual sin ventas regulares.
@@ -834,3 +840,5 @@ En este apartado estaremos mostrando un modelo con toda la información que se n
 Se presenta el diagrama del repositorio a presentar para el cliente:
 
 _ **Gráfico 12.** _ _Estructura del repositorio DEALER con despliegue en la entrega al cliente_
+
+
