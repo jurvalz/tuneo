@@ -1,0 +1,154 @@
+@keyframes bounce {
+    0% { transform:translateY(0) }
+    100% { transform:translateY(-20px) }
+}
+
+.dockcontac {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    width: 30%;
+    font-size:medium;
+    font-family: Arial, sans-serif;
+    z-index: 100;
+}
+
+.dockcontac ul {
+    position: relative;
+    display: inline-block;
+    padding: 19px 5px;
+    margin: 0;
+    text-align: center;
+
+}
+
+.dockcontac ul:before, .dock ul:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 31px;
+}
+
+.dockcontac ul:before {
+    left: -31px;
+
+}
+
+.dockcontac ul:after {
+    right: -31px;
+
+}
+
+.dockcontac li {
+    display: flex;
+    position: relative;
+    margin: 0 1px;
+    //margin-bottom: 15px;
+    vertical-align: baseline;
+    width: 50px;
+    height: 50px;
+    //box-reflect: below -16px -webkit-gradient(linear, left top, left bottom,from(transparent),color-stop(91%, rgba(255, 255, 255, .1)),color-stop(91.01%, transparent),to(transparent));
+    flex-flow: row;
+    align-content: center;
+    align-items: center;
+    float: left;
+}
+
+.dockcontac a {
+    display: inline-block;
+    cursor: default;
+    outline: none;
+}
+
+.dockcontac li:target a {
+    animation: bounce .3s 6 alternate ease-out
+}
+
+.dockcontac li:after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, .8);
+    margin-left: 7px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(75, 255, 255, .4), 0 0 4px rgba(26, 29, 29, 0.5), 0 -1px 7px rgb(11, 12, 12);
+    transition: opacity .5s;
+}
+
+.dockcontac li:target:after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dockcontac em {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    display: none;
+    width: 150px;
+    margin-left: -75px;
+    text-align: center;
+}
+
+.dockcontac em:after {
+    content: " ";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -6px;
+    width: 0;
+    background: rgba(255,255,255,0.2);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, .6);
+    border-bottom: none;
+}
+
+.dockcontac em span {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-style: normal;
+    color: #FFF;
+    background: #000;
+    background: rgba(0, 0, 0, .6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .9);
+    border-radius: 12px;
+}
+
+.dockcontac li:hover em, .dockcontac li a:focus em {
+    display: block;
+}
+
+.dockcontac img {
+    //width: 2vw;//
+    //height: 2vw;
+    //margin-bottom: 30px;
+    width: 35px;
+    height: 30px;
+    margin-left: 10px;    
+    border: none;
+    transition: width .2s, height .2s;
+    
+}
+/*
+.dockcontac img.mayor {
+    width: 2vw !important;
+}
+.dockcontac img.chat {
+    width: 2.4vw !important;
+}
+*/
+.dockcontac li:hover img, .dockcontac li a:focus img {
+    width: 50px;
+}
+
+.dockcontac li:active img {
+    opacity: .9;
+}
