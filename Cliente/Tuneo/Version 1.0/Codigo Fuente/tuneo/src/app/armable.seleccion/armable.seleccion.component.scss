@@ -1,0 +1,266 @@
+.panel-armable-sel{
+    width: 99vw;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 100%;
+    margin: 2vh 1vw;
+    span{
+        font-size: 2rem;
+    }
+    .estrella{
+        height: 3.5vh;
+        margin-left: 0.5vw;
+    }
+    .icono-guardar{
+        height: 3vh;
+        margin-left: 0.5vw;
+    }
+    .guardar{        
+        margin-left: 4vw;
+        width: 8vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        border-radius: 0.5rem;
+        /*background-color: #f8ec25;*/
+    }
+    .guardar:hover{
+        cursor: pointer;
+        background-color: #f8ec25;
+    }
+    .armable{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1; 
+        #canva-tres{
+            width: 60vw;
+            height: 56vh;
+            contain: content;            
+        }
+    }
+    .config{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1; 
+        .seleccion-pri{
+            display: grid;
+            grid-template-columns: 25% 25% 50%;
+            grid-template-rows: 3vh;
+            .btn-select{
+                background-color: #f8ec25;
+            }
+            .pri-1{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 1; 
+                button{
+                    width: 100%;
+                    height: 3vh;
+                    border-radius: 1rem 0 0 1rem;
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+            }
+            .pri-2{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 1; 
+                button{
+                    width: 100%;
+                    height: 3vh;
+                    border-radius: 0 1rem 1rem 0;
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+            }
+            .pri-3{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3; 
+                p{
+                    margin: 1vh 1vw 1vh 0;
+                    text-align: justify;
+                }
+                .circulo{
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 1rem;
+                    border: 1px solid #cecece;
+                    float: left;
+                    margin-left: 1vw;
+                    margin-top: 1vh;
+                    cursor: pointer;
+                }
+                .rectangulo{
+                    width: 2rem;
+                    height: 2rem;
+                    //border: 1px solid #cecece;
+                    float: left;
+                    margin-left: 1vw;
+                    margin-top: 1vh;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        
+        .tprecio{
+            float: left;
+            margin: 3vh;
+            font-size: 1.2rem;
+            font-weight: bolder;
+        }
+    }
+    .oferta{
+        width: 4vw;
+    }
+    .superficie{
+        border: 1px solid #000000;
+        height: 9vh;
+    }
+    .center{
+        text-align: center;
+    }
+}
+@media(max-width:1600px) and (min-width:1200px){
+    .panel-armable-sel{
+        width: 95vw;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        .armable{
+            #canva-tres{
+                width: 40vw;
+                height: 56vh;
+                contain: content;            
+            }
+        }
+        .config{
+            .seleccion-pri{
+                .pri-3{
+
+                    .rectangulo{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+        .oferta{
+            width: 3vw;
+        }
+    }
+}
+
+.titulo{
+    margin-bottom: 1vh;
+    font-weight: bolder;
+}
+.tacha{
+    border-bottom: 4px solid red;
+    transform:translateY(-20px) translateX(5px) rotate(27deg); 
+    position: absolute;
+    width: 4vw;
+    height: 4vh;
+}
+.seleccion-cara{
+    border: 3px solid #a0a0a0;
+    border-radius: 2.5rem;
+    margin-top: 0.5vh!important;
+} 
+.seleccion-borde{
+    border: 3px solid #a0a0a0;
+    margin-top: 0.7vh!important;
+} 
+
+
+.modal-contenido{
+    background-color:#ffffff;
+    width:25vw;
+    padding: 2vh 2vw;
+    margin: 20vh auto;
+    position: relative;    
+    border-radius: 0.5rem;
+    text-align: center;
+    #closeModalLogin{
+        font-size: 1.6rem;
+        cursor: pointer;
+        position: absolute;
+        top:0;
+        left: 27.6vw;
+        z-index: 600;
+    }
+    
+    h1{
+        font-size: 2.2rem;
+        margin: 0 0 1vh 0;
+        text-align: center;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+}
+.modal{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition: all 1s;
+    z-index: 501;
+}
+#miModalValoracion:target{
+    opacity:1;
+    pointer-events:auto;
+}
+progress{
+    margin-right: 1vw;
+    width: 100%;
+}
+progress[value] {
+/* Reset the default appearance */
+-webkit-appearance: none;
+    appearance: none;
+
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+    background-color:#F8EC25;
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+.hidden{
+    display: none;
+}
+.m-2{
+    margin-top: 2vh;
+}
+.w-14{
+    width: 14vw;
+}
+.h-8{
+    height: 8vh;
+}
+.estrella{
+    height: 3.5vh;
+    margin: 0 0.25vw;
+}
+.marca{
+    font-size: 3.0rem;
+}  
+.f-left{
+    float: left;
+    margin-right: 1vw
+}
