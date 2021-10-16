@@ -1,0 +1,26 @@
+<tuheader [(header)]="header"></tuheader>
+<div class="swiper-container" *ngIf="principalSlider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of listaProyectos; let i = index" [ngStyle]="{'background-image': 'url('+item.imagen+')'}" 
+            (click) = verProyecto(i)>
+            <p class="titulo BebasNeueRegular">{{item.nombre}}</p>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div id="paginador-residencial" class="swiper-pagination"></div>
+</div>
+
+
+<div class="swiper-container-inner" *ngIf="!principalSlider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of proyecto.lista; let i = index" [ngStyle]="{'background-image': 'url('+item.imagen+')'}">
+        </div>            
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <p class="titulo BebasNeueRegular">{{proyecto.nombre}}</p>
+    <button class="btn" (click)="retornar()">&times;</button>
+</div>
