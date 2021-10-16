@@ -1,0 +1,17 @@
+<div class="grid-armable">
+    <div *ngFor="let item of listaPaginaProducto; let i = index" 
+        [ngClass]="['a'+(i+1)]"  [routerLink]="['/armable-seleccion',item.coProducto]" (mouseover)="item.hover=true" (mouseout)="item.hover=false">  
+        <div [ngClass]="['border-style']" [ngStyle]="{'background': 'url('+(item.hover ? item.imagenPatronGif :item.imagenPatronJpg)+') no-repeat center center/contain'}">
+        </div>    
+        <p class="bolder">{{item.nombre}}</p>
+        <p>PRECIO: S/ {{item.precioEntre}}</p>
+    </div>    
+</div>
+
+<div class="paginador" *ngIf="productos.patrones.length>10">
+    <button (click)="paginadorProducto(0)" [ngClass]="{'paginaItem':true}"><<</button>
+    <button (click)="paginadorProducto(indiceSelect-1)" [ngClass]="{'paginaItem':true}"><</button>
+    <button *ngFor="let pagina of indicesPaginador;" (click)="paginadorProducto(pagina)" [ngClass]="{'paginaItem':true,'paginaSelector':pagina==indiceSelect}">{{pagina+1}}</button>
+    <button (click)="paginadorProducto(indiceSelect+1)" [ngClass]="{'paginaItem':true}">></button>
+    <button (click)="paginadorProducto(indiceMax)" [ngClass]="{'paginaItem':true}">>></button>
+</div>
