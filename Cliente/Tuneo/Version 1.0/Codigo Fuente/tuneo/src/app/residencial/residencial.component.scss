@@ -1,0 +1,224 @@
+@import './../../../node_modules/swiper/css/swiper.min';
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.swiper-container {
+    .swiper-wrapper{
+        .swiper-slide {
+            background-position: center!important;
+            background-size: cover!important;
+            width: 42vh!important;
+            height: 42vh!important;
+            background-color: rgba(0,0,0,0.4);
+            background-blend-mode: overlay;
+        }
+    } 
+}
+.swiper-container{
+    .swiper-wrapper{
+        .swiper-slide-active {
+            background-position: center!important;
+            background-size: cover!important;
+            width: 42vh!important;
+            height: 42vh!important;
+            background-color: rgba(0,0,0,0.0);
+            background-blend-mode: overlay;
+        }
+    } 
+} 
+
+div.swiper-slide{
+    p.titulo{
+        display: none;
+    }
+}
+div.swiper-slide.swiper-slide-active > p{
+    display: block!important;
+    position: relative;
+    position: relative;
+    top: 100%;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 1vh;
+    font-size: 1rem;
+}
+
+
+.swiper-container-inner {
+    /*
+    width: 50%;
+    height: 50vh;
+    margin: 0 auto;
+    top: 10vh;
+    position: relative;*/
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    top: 23vh;
+    position: fixed;
+    left: 25vw;
+    z-index: 500;
+    .titulo{
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 1.5vh;
+        font-size: 1.3rem;
+    }
+    .btn{
+        margin: 1vh 24.5vw;
+        width: 1.1vw;
+        background-color: #F8EC25;
+        border-radius: 0.5vw;
+        cursor: pointer;
+    }
+}
+.swiper-container-inner div.swiper-wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container-inner div.swiper-wrapper div.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-bnoneack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container-inner div.swiper-wrapper div.swiper-slide-active {
+    background-position: center!important;
+    background-size: cover!important;
+    width: 50vw!important;
+    height: 50vh!important;
+    background-color: rgba(0,0,0,0.0);
+    background-blend-mode: overlay;
+    margin: 0;
+    padding: 0;
+}
+.swiper-button-prev{
+    color: #F8EC25;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.swiper-button-next{
+    color: #F8EC25;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.swiper-button-disabled{
+    color: #7f7f7f;
+}
+@media(min-width: 1900px){
+    .swiper-container{
+        width: 100vw;
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        height: 34vh;
+    }
+    div.swiper-slide.swiper-slide-active > p{
+        display: block!important;
+        position: relative;
+        position: relative;
+        top: 100%;
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 1.5vh;
+        font-size: 1.3rem;
+    }
+}
+.envioFlot{
+    position: absolute;
+    bottom: 15%;
+    left: 46%;
+    button{
+        width: 8vw;
+        height: 4vh;
+        background-color: #F8EC25;
+        font-weight: bolder;
+        border-radius: 0.5rem;
+    }
+}
+
+.modal-contenido{
+    background-color:#DEDEDE;
+    width:300px;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    input[type=text]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    input[type=password]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    button{
+        width: 80%;
+        background-color: #F8EC25;
+        margin: 2vh 0;
+        font-family: "SansProRegular";
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+    }
+    a{
+      margin-left: 96%;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #000000;
+      cursor: pointer;
+  }
+
+}
+.modal{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition: all 1s;
+    z-index: 501;
+}
+
+.hidden{
+    display: none;
+}
+span.numero{
+    /*position: absolute;
+    top: 1.5vh;
+    left: 13vw;*/
+    position: relative;
+    top: -1.3vh;
+    left: -1.5vw;
+}
