@@ -1,0 +1,104 @@
+<tuheader [(header)]="header"></tuheader>
+<div class="panel-tallado-sel">
+    <div class="tallado">
+        <!--img [src]="producto.imagen"-->
+        <div class="lienzo i-fragmento" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+            
+        </div>
+        <div class="lienzo" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+            
+        </div>
+        <div class="lienzo i-fragmento" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+            
+        </div>
+        <div class="lienzo" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+            
+        </div>
+        <div class="galeria" (click)="verGaleria()"></div>
+    </div>
+    <div class="config">
+        <div class="row">
+            <div class="row">
+                <span>Biombo</span>
+            </div>
+            <div class="row">
+                <span class="BebasNeueRegular">{{promedio | number: '1.1-2'}}</span>
+                <img class="estrella" *ngFor="let item of estrellas" src="assets/images/partes/menu/principal/estrellac.svg">
+                <img class="estrella" *ngFor="let item of estrellasParcial" src="assets/images/partes/menu/principal/estrellap.svg">
+
+            </div>
+            <div class="row">
+                <a>Detalle de la calificación</a>
+            </div>
+        </div>
+        <div class="row">
+            <p class="atext">MEDIDAS:</p>
+            <div class="row">
+                <select id="medida" [(ngModel)]="medidasElec" (change)="cargarMedidas()">
+                    <option *ngFor="let item of medidas" [ngValue]="item">{{item}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="atext">SOPORTE:</p>
+            <div class="row">
+                <select [(ngModel)]="materialesElec" (change)="cargarMaterial()">
+                    <option *ngFor="let item of materiales" [ngValue]="item">{{item}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="atext">MATERIAL:</p>
+            <div class="row">
+                <select [(ngModel)]="acabadosElec" (change)="cargarAcabado()">
+                    <option *ngFor="let item of acabados" [ngValue]="item">{{item}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="linea">
+                <span class="tit-med">TIEMPO DE ENTREGA:</span>
+                <span class="">{{producto.tiempoEntrega}}</span>
+                <span class="tit-med">PESO:</span>
+                <span class="">{{producto.peso}}</span>
+            </p>
+        </div>
+        <div class="row">
+            <p class="tprecio fs atext">PRECIO:</p>
+            <div>
+                <p class="tprecio fs">S/. {{producto.precioOferta}}</p>         
+            </div>
+        </div>
+        <div id="movible-cubo" class="movible">
+            <img *ngFor="let item of repeticiones" id="{{'cubo'+item}}" class="{{'cubo'+item}}"  draggable="true" ondragstart="onDragStart(event);"
+                src="assets/images/partes/menu/principal/carritoCompra.svg">
+        </div>
+        <div class="row">
+            <button class="button-tallado">
+                GUARDAR
+                <img class="guardar" src="assets/images/partes/menu/principal/corazon.svg">    
+            </button>
+            <button class="button-tallado">
+                COMPRAR
+                <img class="guardar" src="assets/images/partes/menu/principal/carritoCompra.svg">    
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" *ngIf="principalSlider">
+
+    <div class="swiper-container-inner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let item of listaImagen; let i = index" [ngStyle]="{'background-image': 'url('+item+')'}">
+            </div>            
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <p class="titulo BebasNeueRegular"></p>
+        <button class="btn" (click)="retornar()">&times;</button>
+    </div>
+</div>
