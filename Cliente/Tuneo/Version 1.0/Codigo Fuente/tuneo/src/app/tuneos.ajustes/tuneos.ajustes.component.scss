@@ -1,0 +1,47 @@
+.ajuste{
+    background-color: #dedede;
+    height: 65vh;
+    width: 100vw;
+    padding-top: 0.4vh;
+}
+.titulo{
+    margin: 1vh 2vw;
+    width: 95vw;
+    height: 4vh;
+    background-color: #ffffff;
+    font-weight: bolder;
+    padding: 1vh 0.5vw;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.detalle{
+    margin: 1vh 2vw;
+    width: 95vw;
+    height: 4vh;
+    font-weight: bolder;
+    padding: 1vh 0;
+    input[type=text]{
+        width: 50vw;
+        float: left;
+        height: 3vh;
+        border-radius: 0.5rem;
+        padding: 0.5vh 0.5vw;
+        border: 0;
+        margin: 1vh 0;
+    }
+    button{
+        width: 16vw;
+        float: left;
+        height: 4vh;
+        border-radius: 0.5rem;
+        border: 0;
+        margin: 1vh 1vh;
+        text-align: center;
+        background-color: #ffffff;
+        font-weight: bolder;
+    }
+    button:hover{
+        background-color: #F8EC25;
+    }
+}

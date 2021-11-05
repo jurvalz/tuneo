@@ -1,0 +1,360 @@
+.carrito-superior{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows: 31% 38% 31%;
+    height: 24vh;
+    .resumen{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        //padding: 2vh 2vw;
+        font-size: 1.2rem;
+        input[type=checkbox]{
+            margin-right: 1vw;
+        }
+        
+        .w-100{
+            width: 96%;
+            float: left;
+            padding: 1vh 1vw;
+        }
+        .w-25{
+            width: 25%;
+            float: left;
+        }
+        .w-80{
+            width: 80%;
+        }
+        .tit-resumen{
+            margin-top: 2vh;
+        }
+        .bold{
+            font-weight: bolder;
+        }
+        button.gris{
+            background-color: #DEDEDE;
+            border-radius: 0.25rem;
+        }
+        button.mask{
+            background-color: #F8EC25;
+            border-radius: 0.25rem;
+        }
+        .der-int{
+            text-align: right;
+            padding-right: 5vw;
+        }
+        .center{
+            text-align: center;
+        }
+        .m-1{
+            margin: 1vh 0;
+        }
+        .h-2{
+            height: 5vh;
+            width: 50%;
+        }
+
+    }    
+    .paso1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-size: 0.8rem;
+        padding-top: 1vh;
+        margin: 0 1vw;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        background-color: #DEDEDE;
+        text-align: center;        
+        cursor: pointer;
+    }
+    .paso2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 0.8rem;
+        padding-top: 1vh;
+        margin: 0 1vw;
+        background-color: #DEDEDE;
+        text-align: center;
+        cursor: pointer;
+    }
+    .paso3{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 0.8rem;
+        padding-top: 1vh;
+        margin: 0 1vw;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background-color: #DEDEDE;
+        text-align: center;
+        cursor: pointer;        
+    }
+    .paso-selected{
+        background-color: #F8EC25!important;
+    }
+    .panel-resumen-compra{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        .panel-resumen{
+            padding: 1.5vh;
+            background-color: #DEDEDE;
+            border-radius: 0.5rem;
+            h3{
+                text-align: center;
+                margin: 1vh 0;
+            }
+            .der{
+                text-align: right!important;
+            }
+        }
+    }    
+}
+.carrito-inferior{
+    margin: 0 1vw 0 1vw;
+}
+button:hover{
+    background-color: #F8EC25!important;
+}
+.modal-contenido{
+    background-color: #DEDEDE;
+    width: 52vw;
+    padding: 0px 20px;
+    margin: 3vh auto;
+    position: relative;
+    border-radius: 0.5rem;
+    min-height: 82vh;
+    h2{
+        margin: 0.5vh 0;
+        text-align: center;
+    }
+    a{
+        margin-left: 96%;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000000;
+        cursor: pointer;
+    }
+    .pregunta{
+        margin: 1vh 0!important;
+    }
+    input[type=radio]{
+        margin: 0 0.5vw 0 1.5vw
+    }
+    input[type=checkbox]{
+        margin: 0 0.5vw 0 1.5vw
+    }
+    input[type=text]{
+        width: 1vw;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+        padding-left: 0.2vw;
+    }
+    input[type=text].amp{
+        width: 5vw!important;
+        margin-left: 0.5vw!important;
+    }
+    input[type=text].num{
+        width: 1vw !important;
+        margin: 0.2vh 1vw 0.2vh 1vw !important;
+    }
+    button{
+        width: 10vw;
+        background-color: #F8EC25;
+        margin: 2vh 0;
+        font-family: "SansProRegular";
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+    }
+}
+.modal-contenido-inner{
+    background-color: #DEDEDE;
+    width: 25%;
+    padding: 20px;
+    margin: 10vh auto;
+    position: relative;
+    border-radius: 0.5rem;
+    min-height: 20vh;
+    a{
+        margin-left: 96%;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000000;
+        cursor: pointer;
+    }
+    h2{
+        margin: 0.5vh 0;
+        text-align: center;
+    }
+}
+.modal-contenido-paso{
+    background-color: #DEDEDE;
+    width: 30%;
+    padding: 20px;
+    margin: 10vh auto;
+    position: relative;
+    border-radius: 0.5rem;
+    min-height: 50vh;
+    button{
+        float: right;
+        width: 10vw;
+        background-color: #F8EC25;
+        border-radius: 0.5rem;
+        margin-top: 1vh;
+        padding: 1vh;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    h2{
+        float: left;
+        width: 100%;
+    }
+    p{
+        float: left;
+        width: 100%;
+    }
+}
+.modal-contenido-registro{
+    background-color:#DEDEDE;
+    width:540px;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;    
+    border-radius: 0.5rem;
+    text-align: center;
+    min-height: 52vh;
+    a{
+        margin-left: 96%;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000000;
+        cursor: pointer;
+    }
+    .segmento{
+        width: 100%;
+        p{
+            text-align: left;
+            width: 40%;
+            float: left;
+            margin: 1vh 0;
+        }
+        input[type=text]{
+            width: 58%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input[type=password]{
+            width: 58%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input[type=checkbox]{
+            width: 8%;
+            margin: 1vh 0;
+            font-family: "SansProRegular";
+            border: none;
+            border-radius: 0.2rem;
+            padding-left: 0.2vw;
+            float: left;
+        }
+        input.nombre{
+            width: 27.36%!important;
+            margin-right: 2%;
+        }
+        button{
+            width: 80%;
+            background-color: #F8EC25;
+            margin: 2vh 0;
+            font-family: "SansProRegular";
+            font-size: 1.2rem;
+            border-radius: 0.2rem;
+        }
+    }
+    
+}
+.modal-contenido-login{
+    background-color:#DEDEDE;
+    width:300px;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;    
+    border-radius: 0.5rem;
+    text-align: center;
+    
+    input[type=text]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    input[type=password]{
+        width: 80%;
+        margin: 1vh 0;
+        font-family: "SansProRegular";
+        border: none;
+        border-radius: 0.2rem;
+    }
+    button{
+        width: 80%;
+        background-color: #F8EC25;
+        margin: 2vh 0;
+        font-family: "SansProRegular";
+        font-size: 1.2rem;
+        border-radius: 0.2rem;
+    }
+    
+}
+.modal{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition: all 1s;
+    z-index: 501;
+}
+
+.hidden{
+    display: none;
+}
+.bold{
+    font-weight: bolder;
+}
+.botons{
+    margin: 1vh 1vw!important;
+}
+.error{
+    color: #F65050 ;
+    font-weight: bolder;
+}
+.errorbloque{
+    position: relative;
+    float: left;
+    top: -6vh;
+    width: 20vw
+}
+.sbold{
+    font-weight: normal!important;
+    color: #000000!important;
+}
