@@ -1,0 +1,26 @@
+<div class="row fondo-mensaje">
+    <div class="row fondo_msg_2 bd_down">
+        <div class="asunto-todos">
+            <div class="etodos bd_right"><input type="checkbox">Todos</div>
+            <div class="easunto bd_right">Asunto</div>
+        </div>
+        <div class="mensaje">Mensaje</div>
+        <div class="busqueda">Búsqueda</div>
+    </div>
+    <div class="row scrollbar" *ngIf="mensajes != null">
+        <div class="row fondo_msg"  *ngFor="let i of mensajes.listMensaje">
+            <div class="col-3 bd_right fragmento">
+                <input type="checkbox">{{i.asunto}}
+            </div>
+            <div class="col-8 bd_right fragmento">
+                <div class="col-11 m1w">
+                    {{i.cuerpo}}
+                </div>
+                <div class="col-1" style="text-align: right">
+                    <img src="assets/images/partes/menu/principal/ic_mas_info.png">
+                </div>
+            </div>
+            <div class="col-1 fragmento m1w"> {{i.fecha}} </div>
+        </div>        
+    </div>
+</div>
