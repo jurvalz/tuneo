@@ -1,0 +1,15 @@
+<ul class="nav-tuneo">
+    <li #mensaje [ngClass]="{'block':!access,'mensajes':access}" class="mensajes" (click)="setOpcion(1,mensaje)">MENSAJES</li>
+    <li #carrito class="carrito selected" (click)="setOpcion(2,carrito)">CARRITO</li>
+    <li #seguimiento [ngClass]="{'block':!access,'seguimiento':access}" (click)="setOpcion(3,seguimiento)">SEGUIMIENTO</li>
+    <li #favorito [ngClass]="{'block':!access,'favoritos':access}" (click)="setOpcion(4,favorito)">FAVORITOS</li>
+    <li #ajuste [ngClass]="{'block':!access,'ajustes':access}" (click)="setOpcion(5,ajuste)">AJUSTES</li>
+    <li #cupon [ngClass]="{'block':!access,'cupones':access}" (click)="setOpcion(6,cupon)">CUPONES</li>
+</ul>
+<hr>
+<mensajes [hidden]="!isOpcion(1)"></mensajes>
+<carrito [hidden]="!isOpcion(2)"></carrito>
+<seguimiento [hidden]="!isOpcion(3)"></seguimiento>
+<favoritos [hidden]="!isOpcion(4)"></favoritos>
+<ajustes [hidden]="!isOpcion(5)"></ajustes>
+<cupones [hidden]="!isOpcion(6)"></cupones>

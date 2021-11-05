@@ -1,0 +1,32 @@
+<p class="bold">PRECIO TOTAL: S/. {{total}} (inc IGV)</p>
+<hr>
+<div class="pedidos">
+    <div *ngFor="let item of listaCarrito; let i = index" [ngClass]="['p'+(i+1)]">
+        <p class="bold">{{item.nombre}}</p>
+        <div class="row producto">
+            <div class="col-6">
+                <img [src]="item.imagen">
+            </div>
+            <div class="col-6">
+                <p class="bold m-t-1">CARA</p>
+                <p>{{item.textoCara}}</p>
+                <p class="bold m-t-1">BORDE</p>
+                <p>{{item.textoBorde}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p><span class="bold">Precio:</span> S/. {{item.precioOferta}}</p>
+                <p class="float bold">Cantidad:</p> 
+                <select name="" id="">
+                    <option *ngFor="let valor of cantidades" [value]="valor" [selected]="valor==item.cantidad">{{valor}}</option>
+                </select>
+            </div>
+            <div class="col-6">                        
+                <button class="bold">EDITAR</button>
+                <button class="bold">ELIMINAR</button>
+            </div>                    
+        </div>
+    </div>
+    
+</div>

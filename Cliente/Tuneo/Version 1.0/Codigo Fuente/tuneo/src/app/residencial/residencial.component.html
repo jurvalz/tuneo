@@ -1,0 +1,48 @@
+<tuheader [(header)]="header"></tuheader>
+<div class="swiper-container" *ngIf="principalSlider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of listaProyectos; let i = index" [ngStyle]="{'background-image': 'url('+item.imagen+')'}" 
+            (click) = verProyecto(i)>
+            <p class="titulo BebasNeueRegular">{{item.nombre}}</p>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div id="paginador-residencial" class="swiper-pagination"></div>
+</div>
+
+
+<div class="swiper-container-inner" *ngIf="!principalSlider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of proyecto.lista; let i = index" [ngStyle]="{'background-image': 'url('+item.imagen+')'}">
+        </div>            
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <p class="titulo BebasNeueRegular">{{proyecto.nombre}}</p>
+    <button class="btn" (click)="retornar()">&times;</button>
+</div>
+<div class="envioFlot">
+    <button class="btn-principal" (click)="abrirEnvio()">Enviar Mensaje</button>
+</div>
+
+<div id="miModalResidencial" class="hidden">
+    <div class="modal-contenido">
+        <a id="closeModalPremium" (click)="cerrar()">&times;</a>
+        <div *ngIf="correoIni">
+            <p style="padding:2%;font-family: SansProBold;">Correo</p>
+            <textarea type="text" name="nombredelacaja" [(ngModel)]="correo" maxlength="500"></textarea>
+            <p style="padding:2%;font-family: SansProBold;">Mensaje</p>
+            <textarea type="text" name="nombredelacaja" [(ngModel)]="mensaje" maxlength="500"></textarea>
+            <button (click)="enviarMensaje()">Enviar</button>
+        </div>
+        <div *ngIf="!correoIni">
+            <h2>Confirmación</h2>
+            <p>Su mensaje fue enviado correctamente. Pronto nos comunicaremos contigo.</p>
+            <button (click)="cerrar()">Cerrar</button>
+        </div>
+        
+    </div>
+</div>

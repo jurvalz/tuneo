@@ -1,0 +1,79 @@
+.fondo-mensaje{
+    background: #e7e7e7;
+    padding: 0 1vw;
+    width: 98vw;
+}
+.fondo_msg{
+    background: #ffffff;
+    border-radius: 0.25rem;
+    margin: 1vh 0;
+    width: 96vw;
+    input[type=checkbox]{
+        margin: 0 0.5vw 0 1vw;
+    }
+    .fragmento{
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        p{
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+.fondo_msg_2{
+    height: 3vh;
+    input[type=checkbox]{
+        margin: 0 0.5vw 0 0.5vw;
+    }
+}
+.bd_down{
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 1.1rem;
+}
+.bd_left{
+    border-left: 1.5px solid #bfbfbf;
+}
+
+.bd_right{
+    border-right: 1.5px solid #bfbfbf;
+}
+div.fondo_msg:hover
+{
+    background-color: #c2c2c2;
+}
+.scrollbar
+{
+    overflow-y: scroll;
+    height: 61vh;
+}
+.asunto-todos{
+    width: 23.4vw;
+    float: left;
+}
+.mensaje{
+    width: 55vw;
+    float: left;
+    text-align: left;
+    margin-left: 1vw;
+}
+.busqueda{
+    width: 12vw;
+    float: left;
+    text-align: right;
+}
+.etodos{
+    margin-left: 0.5vw;
+    width: 6vw;
+    float: left;
+}
+.easunto{
+    margin-left: 0.5vw;
+    width: 16.2vw;
+    float: left;
+}
+.m1w{
+    margin-left: 1vw;
+}
