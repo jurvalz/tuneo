@@ -1,0 +1,77 @@
+.pedidos{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    height: 24vh;
+    font-size: 0.8rem;
+    p.float{
+        float: left;
+    }
+    select{
+        margin-left: 1vw;
+    }
+    .p1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 2vh 1vw;
+        button{
+            width: 90%;
+            margin: 1vh 1vw;  
+            border-radius: 0.25rem;          
+        }
+    }
+    .p2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 2vh 1vw;
+        button{
+            width: 90%;
+            margin: 1vh 1vw;  
+            border-radius: 0.25rem;          
+        }
+    }
+    .p3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 2vh 1vw;
+        button{
+            width: 90%;
+            margin: 1vh 1vw;  
+            border-radius: 0.25rem;          
+        }
+    }
+    .p4{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        padding: 2vh 1vw;
+        button{
+            width: 90%;
+            margin: 1vh 1vw;  
+            border-radius: 0.25rem;          
+        }
+    }
+    .producto{
+        height: 21vh;
+        img{
+            width: 7vw;
+            margin: 3vh auto;
+        }
+    }
+}
+button:hover{
+    background-color: #F8EC25;
+}
+.bold{
+    font-weight: bolder;
+}
+.m-t-1{
+    margin-top: 1vh;
+}
