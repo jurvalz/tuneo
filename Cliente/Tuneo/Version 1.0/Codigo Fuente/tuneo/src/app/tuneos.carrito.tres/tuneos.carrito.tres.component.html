@@ -1,0 +1,39 @@
+<p class="carrito-sub">FORMAS DE PAGO</p>
+<hr>
+<div class="segmento">
+    <input type="radio" name="tipopago" value="culqi" checked> 
+    <label>A través de nuestra plataforma de pagos segura (Culqi).</label>
+    <p>Paga directamente con cualquier tarjeta de crédito o débito . O haz un depósito o transferencia desde cualquier banco.</p>
+</div>
+<div class="segmento">
+    <img class="tarjeta" src="assets/images/partes/menu/principal/tarjetas.svg">
+</div>
+<div class="segmento">
+    <input type="radio" name="tipopago" value="deposito">
+    <label>Directamente a nuestra cuenta (BBVA).</label>
+    <p>Te daremos la información de la cuenta para el pago y deberás enviarnos la constancia del depósito o transferencia.</p> 
+    <p>Recuerda que si la transferencia es hecha desde un banco distinto al BBVA, puede tardar en verse reflejada en nuestra cuenta.</p>
+</div>
+<button id="miBoton" type="button" class="hidden" (click)="modal()">Pagar</button>
+
+<button id="compra" type="button" class="hidden" (click)="pagar()"></button>
+
+<div id="miModalPago" class="hidden">
+    <div class="modal-contenido-inner">
+        <a id="closeModalPago" (click)="cerrarPagoModal()">&times;</a>
+        <p>Para realizar el pago directamente a nuestra cuenta, sigue estos pasos (también los recibirás en la bandeja de mensajes de tu cuenta)</p> 
+
+        <p class="nota">PASO 1:</p>
+        <p>Realiza un depósito o transferencia a </p>
+        <p>0011 0122 0200704596 (BBVA  soles TUNEO SAC)</p>
+        <p>0011 122 000200704596 92 (CCI BBVA soles TUNEO SAC)</p>
+
+        <p class="nota">PASO 2:</p>
+        <p>Envia la constancia de la transacción a tuneotienda@gmail.com</p>
+
+        <p class="nota">PASO 3:</p>
+        <p>Una vez verificada, te lo comunicaremos para que puedas hacer el seguimiento del pedido desde tu cuenta.</p>
+
+        <p>Si tienes alguna consulta, no dudes en comunicarte con nosotros a través de cualquiera de nuestros canales de atención, ubicados en la parte inferior derecha de la pantalla.</p>
+    </div>
+</div>

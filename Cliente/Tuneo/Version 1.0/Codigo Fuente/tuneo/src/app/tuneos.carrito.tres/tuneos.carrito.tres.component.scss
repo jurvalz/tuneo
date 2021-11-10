@@ -1,0 +1,84 @@
+.carrito-inferior{
+    .pedidos{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 100%;
+        height: 24vh;
+        p.float{
+            float: left;
+        }
+        select{
+            margin-left: 1vw;
+        }
+        .p1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            padding: 2vh 1vw;
+            button{
+                width: 90%;
+                margin: 1vh 1vw;  
+                border-radius: 0.25rem;          
+            }
+        }
+        .producto{
+            height: 25vh;
+        }
+    }
+}
+
+.segmento{
+    .tarjeta{
+        width: 45%;
+        margin: 1.5vw;
+    }
+    label{
+        font-weight: bolder;
+        margin-left: 1vw;
+    }
+    p{
+        margin-left: 1.7vw;
+    }
+}
+.hidden{
+    display: none;
+}
+
+.modal-contenido-inner{
+    background-color: #DEDEDE;
+    width: 50%;
+    padding: 20px;
+    margin: 10vh auto;
+    position: relative;
+    border-radius: 0.5rem;
+    min-height: 20vh;
+    a{
+        margin-left: 96%;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000000;
+        cursor: pointer;
+    }
+    h2{
+        margin: 0.5vh 0;
+        text-align: center;
+    }
+    p{
+        margin: 0.5vh 0;
+    }
+    p.nota{
+        font-weight: bolder;
+    }
+}
+.modal{
+    background-color: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition: all 1s;
+    z-index: 501;
+}
