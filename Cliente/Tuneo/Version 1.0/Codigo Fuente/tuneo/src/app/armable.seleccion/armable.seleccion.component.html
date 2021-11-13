@@ -1,0 +1,156 @@
+<tuheader [(header)]="header"></tuheader>
+<div class="panel-armable-sel">
+    <div class="armable">
+        <div class="row">
+            <span class="BebasNeueRegular">{{producto.nombre}}</span>
+        </div>
+        <div class="row">
+            <span class="BebasNeueRegular">{{promedio | number: '1.1-2'}}</span>
+            <img class="estrella" *ngFor="let item of estrellas" src="assets/images/partes/menu/principal/estrellac.svg">
+            <img class="estrella" *ngFor="let item of estrellasParcial" src="assets/images/partes/menu/principal/estrellap.svg">
+        </div>
+        <div class="row">
+            <a (click)="verValoracion()" style="cursor: pointer;">Ver detalle:</a> {{total}} votos 
+        </div>
+        <div id="canva-tres" class="row">
+        </div>
+    </div>
+    <div class="config">
+        <p class="titulo">CARAS:</p>
+        <div class="seleccion-pri">
+            <div class="pri-1"><button [ngClass]="{'btn-select':tipoSuperficie == 'L'}" (click)="cambioSuperficie('L')">LAMINADO</button></div>
+            <div class="pri-2"><button [ngClass]="{'btn-select':tipoSuperficie == 'P'}" (click)="cambioSuperficie('P')">PINTADO</button></div>
+            <div class="pri-3">
+                <p *ngIf="tipoSuperficie=='L'">El laminado es un panel  formado de capas de fibra y resinas termoendurecedoras. La apariencia es similar a la de la “melamina”, pero de mayor calidad.</p>
+                <p *ngIf="tipoSuperficie=='P'">Pintado con aceite natural que protegerá la madera por enlace molecular y dejará ver sus vetas. Este aceite es 0% tóxico, te cuidará a ti y al medio ambiente.</p>
+            </div>
+        </div>
+        <div class="seleccion-pri">
+            <div class="pri-1">
+                <button [ngClass]="{'btn-select':tipoColor == 'C'}" (click)="cambioColor('C')">COLOR</button>
+            </div>
+            <div class="pri-2" *ngIf="tipoSuperficie == 'L'">
+                <button [ngClass]="{'btn-select':tipoColor == 'M'}" (click)="cambioColor('M')">TIPO MADERA</button>
+            </div>
+            <div class="pri-3">
+                <div *ngIf="tipoColor=='C'">
+                    <img [ngClass]="{'rectangulo':true, 'seleccion-cara': valorCara == item}"  *ngFor="let item of listaSuperficie; let i = index" [src]="item" (click)="cambioFiguraSuperficie(item)">
+                </div>
+                <div *ngIf="tipoColor=='M'">
+                    <img [ngClass]="{'rectangulo':true, 'seleccion-cara': valorCara == item}"  *ngFor="let item of listaSuperficie; let i = index" [src]="item" (click)="cambioFiguraSuperficie(item)">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="titulo">BORDES:</p>
+        <div class="seleccion-pri">
+            <div class="pri-1" *ngIf="!(tipoSuperficie == 'L' && tipoColor == 'M')">
+                <button [ngClass]="{'btn-select':tipoCanto == 'P'}" (click)="cambioCanto('P')">PINTADO</button>
+            </div>
+            <div class="pri-2" *ngIf="tipoSuperficie == 'L' && tipoColor == 'M'">
+                <button [ngClass]="{'btn-select':tipoCanto == 'PVC'}" (click)="cambioCanto('PVC')">PVC</button>
+            </div>
+            <div class="pri-3">
+                <div *ngIf="tipoCanto=='P'">
+                    <img [ngClass]="{'rectangulo':true, 'seleccion-borde': valorBorde == item}" *ngFor="let item of listaCanto; let i = index" [src]="item" (click)="cambioFiguraCanto(item)">
+                </div>
+                <div *ngIf="tipoCanto=='PVC'">
+                    <img [ngClass]="{'rectangulo':true, 'seleccion-borde': valorBorde == item}" *ngFor="let item of listaCanto; let i = index" [src]="item" (click)="cambioFiguraCanto(item)">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p class="titulo">DESCRIPCIÓN</p>
+            <div class="row">
+                <div class="col-2 bolder">MATERIAL:</div><div class="col-9">{{producto.material}}</div>
+                <div class="col-2 bolder">MEDIDAS:</div><div class="col-4">{{producto.medidas}}</div>
+                <div class="col-2 bolder">PESO:</div><div class="col-4">{{producto.peso}} kg</div>
+                <div class="col-2 bolder">CARA:</div><div class="col-4">{{producto.textoCara}}</div>
+                <div class="col-2 bolder">BORDE:</div><div class="col-4">{{producto.textoBorde}}</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div>
+                <p class="tprecio">PRECIO: <span class="tacha"></span> S/. {{producto.precio}}    S/. {{producto.precioOferta}}</p>
+                <img class="oferta" src="assets/images/partes/menu/principal/oferta.svg">            
+            </div>
+
+        </div>
+        <div class="row" class="center">
+            <button class="guardar">
+                FAVORITO
+                <img class="icono-guardar" src="assets/images/partes/menu/principal/corazon.svg">    
+            </button>
+            <button class="guardar" (click)="agregarCarrito()">
+                AGREGAR
+                <img class="icono-guardar" src="assets/images/partes/menu/principal/carritoCompra.svg">    
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="miModalValoracion" class="hidden">
+    <div class="modal-contenido">
+        <a id="closeModalLogin" (click)="cerrarValoracion()">&times;</a>
+        <h1 class="BebasNeueRegular">DETALLE DE CALIFICACIÓN</h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="row marca BebasNeueRegular h-8">
+                    {{promedio| number: '1.1-2'}}
+                </div>
+                <div class="row">5 ESTRELLAS</div>
+                <div class="row">4 ESTRELLAS</div>
+                <div class="row">3 ESTRELLAS</div>
+                <div class="row">2 ESTRELLAS</div>
+                <div class="row">1 ESTRELLA<span style="color: #ffffff;">S</span></div>                
+            </div>
+            <div class="col-8">
+                <div class="row h-8">
+                    <div class="w-14">
+                        <div class="estrellas">
+                            <img class="estrella" *ngFor="let item of estrellas" src="assets/images/partes/menu/principal/estrellac.svg">
+                            <img class="estrella" *ngFor="let item of estrellasParcial" src="assets/images/partes/menu/principal/estrellap.svg">
+                        </div>
+                        <div><strong>{{total| number: '1.0'}}</strong> VOTOS</div>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="w-14 f-left">
+                        <progress [max]="total" [value]="valoracion.estrella5"></progress>
+                    </div>
+                    <div class="f-left">{{valoracion.estrella5}}</div>
+                </div>
+                <div class="row">
+                    <div class="w-14 f-left">
+                        <progress [max]="total" [value]="valoracion.estrella4"></progress>
+                    </div>
+                    <div class="f-left">{{valoracion.estrella4}}</div>
+                </div>
+                <div class="row">
+                    <div class="w-14 f-left">
+                        <progress [max]="total" [value]="valoracion.estrella3"></progress>
+                    </div>
+                    <div class="f-left">{{valoracion.estrella3}}</div>
+                </div>
+                <div class="row">
+                    <div class="w-14 f-left">
+                        <progress [max]="total" [value]="valoracion.estrella2"></progress>
+                    </div>
+                    <div class="f-left">{{valoracion.estrella2}}</div>
+                </div>
+                <div class="row">
+                    <div class="w-14 f-left">
+                        <progress [max]="total" [value]="valoracion.estrella1"></progress>
+                    </div>
+                    <div class="f-left">{{valoracion.estrella1}}</div>
+                </div>
+                    
+            </div>
+        </div>
+       
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+ul.nav-tuneo{
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 100%;
+    height: 4vh;
+    text-align: center;
+    .selected{
+        background-color: #F8EC25;
+    }
+    li{
+        padding-top: 0.5vh;
+        cursor: pointer;
+    }
+    li.mensajes{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    li.carrito{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    li.seguimiento{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    li.favoritos{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    li.ajustes{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    li.cupones{
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+}
+.block{
+    color: #cecece!important;
+}

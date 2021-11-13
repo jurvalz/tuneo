@@ -1,0 +1,191 @@
+.especial-filtro{
+    height: 13vh;    
+    width: 99vw;    
+    margin: 0 0.5vw;    
+    display: grid;    
+    grid-template-columns: 36% 33% 28%;    
+    grid-template-rows: 100%;
+
+}
+
+.ef-1{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    .areco{
+        margin-left: 2.5vw;
+        float: left;
+        width: 10vw;
+    }
+    .aordena{
+        //margin: 0 0 0 2.5vw;
+        font-weight: bold;
+        font-size: 1.1rem;
+        float: left;
+        width: 11vw;
+    }
+    .ordena{
+        margin-top: 3vh;
+    }
+    
+    .aoferta{
+        background: url(./../../assets/images/partes/menu/principal/oferta.svg) no-repeat;
+        width: 4vw;
+        height: 7vh;
+        margin: 1vh 0 0 1vw;
+        float: left;
+    }
+    .anuevo{
+        background: url(./../../assets/images/partes/menu/principal/nuevo.svg) no-repeat;
+        width: 4vw;
+        height: 7vh;
+        margin: 1vh 0 0 1vw;
+        float: left;
+    }
+    .atop{
+        background: url(./../../assets/images/partes/menu/principal/top.svg) no-repeat;
+        width: 4vw;
+        height: 7vh;
+        margin: 1vh 0 0 1vw;
+        float: left;
+    }
+    .lista{
+        width: 11vw;
+        .ordenar-select{
+            width: 15.6vw;
+            //margin-left: -2vw;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+
+.ef-2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1; 
+    grid-row-end: 2;  
+    display: grid;
+    grid-template-columns: 8% 23% 23% 23% 23%;
+    grid-template-rows: 100%;
+    text-align: center;
+    .ef-2-1{        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-2-2{        
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-2-3{        
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-2-4{        
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-2-5{       
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .amesa{
+        background: url(./../../assets/images/partes/menu/principal/mesa.svg) no-repeat;
+        width: 3vw;
+        height: 7vh;
+        margin: 2vh auto 0 auto;
+    }
+}
+
+.ef-3{
+    grid-column-start: 2;
+    grid-column-end: 3;    
+    grid-row-start: 1;    
+    grid-row-end: 2;   
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 100%;
+    text-align: center;    
+    .ef-3-1{        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-3-2{        
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ef-3-3{        
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+    .ageometrica{
+        background: url(./../../assets/images/partes/menu/principal/geometrica.svg) no-repeat;
+        width: 3vw;
+        height: 7vh;
+        margin: 2vh auto 0 auto;
+    }
+    .aorganica{
+        background: url(./../../assets/images/partes/menu/principal/organica.svg) no-repeat;
+        width: 3vw;
+        height: 7vh;
+        margin: 2vh auto 0 auto;
+    }
+}
+
+.cinta{
+    position: fixed;
+    top: 38vh;
+    
+}
+.cinta-1{
+    position: relative;
+    float: left;
+    width: 65vw;
+    height: 6vw;
+    background-color: #F8EC25;
+    font-size: 3rem;
+    p{
+        margin-top: 2vh;
+        text-align: right;
+    }
+}
+.cinta-2 {
+    position: relative;
+    float: left;
+    margin:0 auto;
+    width:0;
+    height:0;
+    border-color:#F8EC25 transparent #F8EC25 #F8EC25;
+    border-style:solid;
+    border-width:3vw;
+} 
+
+.atext{
+    margin: 3.5vh 0 0 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.t-center{
+    text-align: center;
+    font-size: 0.9rem;
+}
